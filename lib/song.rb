@@ -29,7 +29,13 @@ class Song
   end 
 
   def self.genres 
-    @@genres.uniq 
+    @@genres.uniq.each do |genre|
+      if @@genres.include?(genre)
+        @@genres[genre] += 1 
+      else 
+        @@genres[genre] = 1 
+      end 
+    end 
    
   end 
   
