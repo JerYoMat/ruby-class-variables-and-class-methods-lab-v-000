@@ -29,13 +29,15 @@ class Song
   end 
 
   def self.genres 
-    @@genres.uniq.each do |genre|
-      if @@genres.include?(genre)
-        @@genres[genre] += 1 
+  genre_sum = {}
+@@genres.uniq.each do |genre|
+      if genre_sum.include?(genre)
+         genre_sum[genre] +=m1
       else 
-        @@genres[genre] = 1 
+        genre_sum[genre] = 1 
       end 
     end 
+      genre_sum
    
   end 
   
