@@ -24,25 +24,17 @@ class Song
   end 
   
   def self.artists
-    @@artists.uniq 
+    @@artists.uniq
 
   end 
 
   def self.genres 
-  genre_sum = {}
-@@genres.uniq.each do |genre|
-      if genre_sum.include?(genre)
-         genre_sum[genre] +=m1
-      else 
-        genre_sum[genre] = 1 
-      end 
-    end 
-      genre_sum
+    @@genres
    
   end 
   
   def self.genre_count
-  
+    @@genres.count 
   end 
   
   def self.artist_count
